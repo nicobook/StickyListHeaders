@@ -26,7 +26,7 @@
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        <sourceDirectory>${project.basedir}/src/se/emilsjolander/stickylistheaders</sourceDirectory>
+        <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <resources>
             <resource>
                 <directory>${project.basedir}/res</directory>
@@ -43,6 +43,15 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
